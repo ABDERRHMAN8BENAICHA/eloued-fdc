@@ -8,7 +8,7 @@ body,
   height: 100%;
 }
 
-
+/* 
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -64,12 +64,119 @@ body,
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+} */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    /* White */
+    --foreground: 210 100% 14%;
+    /* Dark Blue */
+    --card: 0 0% 100%;
+    /* White */
+    --card-foreground: 210 100% 14%;
+    /* Dark Blue */
+    --popover: 0 0% 100%;
+    /* White */
+    --popover-foreground: 210 100% 14%;
+    /* Dark Blue */
+    --primary: 0 0% 9%;
+    /* Very Dark */
+    --primary-foreground: 0 0% 98%;
+    /* Light */
+    --secondary: 0 0% 96.1%;
+    /* Light Gray */
+    --secondary-foreground: 0 0% 9%;
+    /* Dark Gray */
+    --muted: 0 0% 96.1%;
+    /* Light Gray */
+    --muted-foreground: 0 0% 45.1%;
+    /* Gray */
+    --accent: 0 0% 96.1%;
+    /* Light Gray */
+    --accent-foreground: 0 0% 9%;
+    /* Dark Gray */
+    --destructive: 14 91% 56%;
+    /* Orange */
+    --destructive-foreground: 0 0% 98%;
+    /* Light */
+    --border: 0 0% 89.8%;
+    /* Light Gray */
+    --input: 0 0% 89.8%;
+    /* Light Gray */
+    --ring: 0 0% 3.9%;
+    /* Dark */
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    /* Color */
+    --chart-2: 173 58% 39%;
+    /* Color */
+    --chart-3: 197 37% 24%;
+    /* Color */
+    --chart-4: 43 74% 66%;
+    /* Color */
+    --chart-5: 27 87% 67%;
+    /* Color */
+  }
+
+  .dark {
+    --background: 210 100% 14%;
+    /* Dark Blue */
+    --foreground: 0 0% 98%;
+    /* Light */
+    --card: 210 100% 14%;
+    /* Dark Blue */
+    --card-foreground: 0 0% 98%;
+    /* Light */
+    --popover: 210 100% 14%;
+    /* Dark Blue */
+    --popover-foreground: 0 0% 98%;
+    /* Light */
+    --primary: 0 0% 98%;
+    /* Light */
+    --primary-foreground: 0 0% 9%;
+    /* Dark */
+    --secondary: 0 0% 14.9%;
+    /* Dark */
+    --secondary-foreground: 0 0% 98%;
+    /* Light */
+    --muted: 0 0% 14.9%;
+    /* Dark */
+    --muted-foreground: 0 0% 63.9%;
+    /* Gray */
+    --accent: 0 0% 14.9%;
+    /* Dark */
+    --accent-foreground: 0 0% 98%;
+    /* Light */
+    --destructive: 14 91% 56%;
+    /* Orange */
+    --destructive-foreground: 0 0% 98%;
+    /* Light */
+    --border: 0 0% 14.9%;
+    /* Dark */
+    --input: 0 0% 14.9%;
+    /* Dark */
+    --ring: 0 0% 83.1%;
+    /* Light */
+    --chart-1: 220 70% 50%;
+    /* Color */
+    --chart-2: 160 60% 45%;
+    /* Color */
+    --chart-3: 30 80% 55%;
+    /* Color */
+    --chart-4: 280 65% 60%;
+    /* Color */
+    --chart-5: 340 75% 55%;
+    /* Color */
+  }
 }
+
 
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }

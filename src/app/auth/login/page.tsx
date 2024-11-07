@@ -1,9 +1,10 @@
 import { LoginForm } from "@/components/auth/login-form";
 
 export const metadata = {
-  title: "Login",
-  description: "Login to your account",
+  title: "تسجيل الدخول",
+  description: "تسجيل الدخول إلى حسابك",
 };
+
 const LoginPage = () => {
   return <LoginForm />;
 };

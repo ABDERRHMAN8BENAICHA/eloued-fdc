@@ -31,7 +31,7 @@ export default async function RootLayout({
 
   return (
     <SessionProvider session={session}>
-      <html lang="en">
+      <html lang="en" dir="rtl">
         <body className={cn("min-h-screen", GeistSans.className)}>
           <Suspense>
             <ThemeProvider

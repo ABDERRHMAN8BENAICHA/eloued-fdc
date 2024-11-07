@@ -28,7 +28,7 @@ export const LoginForm = () => {
   const callbackUrl = searchParams.get("callbackUrl");
   const urlError =
     searchParams.get("error") === "OAuthAccountNotLinked"
-      ? "Email already in use with different provider!"
+      ? "البريد الإلكتروني مستخدم مع موفر مختلف!"
       : "";
 
   const [showTwoFactor, setShowTwoFactor] = useState(false);
@@ -65,15 +65,15 @@ export const LoginForm = () => {
             setShowTwoFactor(true);
           }
         })
-        .catch(() => setError("Something went wrong"));
+        .catch(() => setError("حدث خطأ ما"));
     });
   };
 
   return (
     <CardWrapper
-      headerLabel="Welcome back!"
-      descriptionLabel="Welcome back! Login to your account to continue."
-      backButtonLabel="Don't have an account?"
+      headerLabel="مرحبًا بعودتك!"
+      descriptionLabel="مرحبًا بعودتك! سجل دخولك إلى حسابك للمتابعة."
+      backButtonLabel="ليس لديك حساب؟"
       backButtonHref="/auth/register"
       showSocial
     >
@@ -86,7 +86,7 @@ export const LoginForm = () => {
                 name="code"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Two Factor Code</FormLabel>
+                    <FormLabel>رمز التحقق الثنائي</FormLabel>
                     <FormControl>
                       <Input
                         {...field}
@@ -106,12 +106,12 @@ export const LoginForm = () => {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email</FormLabel>
+                      <FormLabel>البريد الإلكتروني</FormLabel>
                       <FormControl>
                         <Input
                           {...field}
                           disabled={isPending}
-                          placeholder="john.doe@example.com"
+                          placeholder="example@example.com"
                           type="email"
                         />
                       </FormControl>
@@ -124,7 +124,7 @@ export const LoginForm = () => {
                   name="password"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Password</FormLabel>
+                      <FormLabel>كلمة المرور</FormLabel>
                       <FormControl>
                         <Input
                           {...field}
@@ -139,7 +139,7 @@ export const LoginForm = () => {
                         asChild
                         className="px-0 font-normal"
                       >
-                        <Link href="/auth/reset">Forgot password?</Link>
+                        <Link href="/auth/reset">نسيت كلمة المرور؟</Link>
                       </Button>
                       <FormMessage />
                     </FormItem>
@@ -151,7 +151,7 @@ export const LoginForm = () => {
           <FormError message={error ?? urlError} />
           <FormSuccess message={success} />
           <Button disabled={isPending} type="submit" className="w-full">
-            {showTwoFactor ? "Confirm" : "Login"}
+            {showTwoFactor ? "تأكيد" : "تسجيل الدخول"}
           </Button>
         </form>
       </Form>

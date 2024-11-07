@@ -14,14 +14,13 @@ export const NewVerificationForm = () => {
   const [success, setSuccess] = useState<string | undefined>();
 
   const searchParams = useSearchParams();
-
   const token = searchParams.get("token");
 
   const onSubmit = useCallback(() => {
     if (success ?? error) return;
 
     if (!token) {
-      setError("Missing token!");
+      setError("الرمز مفقود!");
       return;
     }
 
@@ -31,7 +30,7 @@ export const NewVerificationForm = () => {
         setError(data.error);
       })
       .catch(() => {
-        setError("Something went wrong!");
+        setError("حدث خطأ ما!");
       });
   }, [token, success, error]);
 
@@ -41,9 +40,9 @@ export const NewVerificationForm = () => {
 
   return (
     <CardWrapper
-      headerLabel="Verify your email"
-      descriptionLabel="Verify your email to continue!"
-      backButtonLabel="Back to login"
+      headerLabel="تأكيد بريدك الإلكتروني"
+      descriptionLabel="قم بتأكيد بريدك الإلكتروني للمتابعة!"
+      backButtonLabel="العودة إلى تسجيل الدخول"
       backButtonHref="/auth/login"
     >
       <div className="flex w-full items-center justify-center">

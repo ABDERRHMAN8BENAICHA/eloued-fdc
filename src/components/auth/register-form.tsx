@@ -49,13 +49,13 @@ export const RegisterForm = () => {
 
   return (
     <CardWrapper
-      headerLabel="Create an account"
-      descriptionLabel="Create an account to continue!"
-      backButtonLabel="Already have an account?"
+      headerLabel="إنشاء حساب جديد"
+      descriptionLabel="أنشئ حسابًا جديدًا للمتابعة!"
+      backButtonLabel="هل لديك حساب بالفعل؟"
       backButtonHref="/auth/login"
       showSocial
     >
-      <Form {...form}>
+      <Form {...form} >
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <div className="space-y-4">
             <FormField
@@ -63,12 +63,12 @@ export const RegisterForm = () => {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel>الاسم</FormLabel>
                   <FormControl>
                     <Input
                       {...field}
                       disabled={isPending}
-                      placeholder="John Doe"
+                      placeholder="محمد أحمد"
                     />
                   </FormControl>
                   <FormMessage />
@@ -80,12 +80,12 @@ export const RegisterForm = () => {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>البريد الإلكتروني</FormLabel>
                   <FormControl>
                     <Input
                       {...field}
                       disabled={isPending}
-                      placeholder="john.doe@example.com"
+                      placeholder="example@domain.com"
                       type="email"
                     />
                   </FormControl>
@@ -98,7 +98,7 @@ export const RegisterForm = () => {
               name="password"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Password</FormLabel>
+                  <FormLabel>كلمة المرور</FormLabel>
                   <FormControl>
                     <Input
                       {...field}
@@ -115,7 +115,7 @@ export const RegisterForm = () => {
           <FormError message={error} />
           <FormSuccess message={success} />
           <Button disabled={isPending} type="submit" className="w-full">
-            Create an account
+            إنشاء حساب
           </Button>
         </form>
       </Form>
