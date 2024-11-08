@@ -4,6 +4,7 @@ import { VerifyMagicLinkEmail } from "@/components/auth/confirm-email";
 import { ResetPasswordMagicLinkEmail } from "@/components/auth/reset-email";
 
 const resend = new Resend(env.RESEND_API_KEY);
+
 /**
  * Sends a two-factor authentication token email to the specified email address.
  * @param email - The recipient's email address.
@@ -13,8 +14,8 @@ export const sendTwoFactorTokenEmail = async (email: string, token: string) => {
   await resend.emails.send({
     from: "Nexa-starter <noreply@muswaddaty.live>",
     to: email,
-    subject: "2FA Code",
-    html: `<p>Your 2FA code: ${token}</p>`,
+    subject: "رمز التحقق الثنائي",
+    html: `<p>رمز التحقق الثنائي: ${token}</p>`,
   });
 };
 
@@ -31,7 +32,7 @@ export const sendPasswordResetEmail = async (email: string, token: string) => {
   await resend.emails.send({
     from: "Nexa-starter <noreply@muswaddaty.live>",
     to: email,
-    subject: "Reset your password",
+    subject: "إعادة تعيين كلمة المرور",
     react: ResetPasswordMagicLinkEmail({ resetLink }),
   });
 };
@@ -41,39 +42,39 @@ export const sendPasswordResetEmail = async (email: string, token: string) => {
  * @param email - The email address to send the verification email to.
  * @param token - The verification token to include in the confirmation link.
  * @returns An object indicating the result of the email sending process.
- *          If successful, it returns { success: "Verification email sent!" }.
- *          If there is an error, it returns { error: "Error message" }.
+ *          If successful, it returns { success: "تم إرسال رسالة التحقق!" }.
+ *          If there is an error, it returns { error: "فشل إرسال رسالة التحقق." }.
  */
 export const sendVerificationEmail = async (email: string, token: string) => {
   try {
     // Validate input parameters
     if (!email) {
-      throw new Error("Email is required.");
+      throw new Error("البريد الإلكتروني مطلوب.");
     }
     if (!token) {
-      throw new Error("Token is required.");
+      throw new Error("الرمز مطلوب.");
     }
 
     // Construct the confirmation link
     const confirmLink = `http://localhost:3000/auth/new-verification?token=${token}`;
-    console.log(`Verification link: ${confirmLink}`);
+    console.log(`رابط التحقق: ${confirmLink}`);
 
     // Send the email using the resend service
     const response = await resend.emails.send({
       from: "Nexa-starter <noreply@muswaddaty.live>",
       to: email,
-      subject: "Confirm your email",
+      subject: "تأكيد بريدك الإلكتروني",
       react: VerifyMagicLinkEmail({ confirmLink }),
     });
 
-    console.log(`Email send response:`, response);
+    console.log(`استجابة إرسال البريد الإلكتروني:`, response);
 
-    return { success: "Verification email sent!" };
+    return { success: "تم إرسال رسالة التحقق!" };
   } catch (error) {
     // Log the error for debugging purposes
-    console.error("Error sending verification email:", error);
+    console.error("خطأ أثناء إرسال رسالة التحقق:", error);
 
     // Return a consistent error response
-    return { error: "Failed to send verification email." };
+    return { error: "فشل إرسال رسالة التحقق." };
   }
 };

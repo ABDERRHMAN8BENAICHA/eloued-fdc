@@ -14,9 +14,9 @@ import { generateVerificationToken } from "@/lib/tokens";
  *
  * @param values - The user registration data.
  * @returns An object indicating the result of the registration process.
- *          If successful, it returns { success: "Confirmation email sent!" }.
- *          If there are invalid fields, it returns { error: "Invalid fields!" }.
- *          If the email is already in use, it returns { error: "Email already in use!" }.
+ *          If successful, it returns { success: "تم إرسال بريد التأكيد!" }.
+ *          If there are invalid fields, it returns { error: "حقول غير صالحة!" }.
+ *          If the email is already in use, it returns { error: "البريد الإلكتروني مستخدم بالفعل!" }.
  */
 export const register = async (values: z.infer<typeof RegisterSchema>) => {
   try {
@@ -24,7 +24,7 @@ export const register = async (values: z.infer<typeof RegisterSchema>) => {
     const validatedFields = RegisterSchema.safeParse(values);
 
     if (!validatedFields.success) {
-      return { error: "Invalid fields!" };
+      return { error: "حقول غير صالحة!" };
     }
 
     const { email, password, name } = validatedFields.data;
@@ -33,7 +33,7 @@ export const register = async (values: z.infer<typeof RegisterSchema>) => {
     const existingUser = await getUserByEmail(email);
 
     if (existingUser) {
-      return { error: "Email already in use!" };
+      return { error: "البريد الإلكتروني مستخدم بالفعل!" };
     }
 
     // Hash the password
@@ -48,19 +48,19 @@ export const register = async (values: z.infer<typeof RegisterSchema>) => {
       },
     });
 
-    console.log("User created successfully!");
+    console.log("تم إنشاء المستخدم بنجاح!");
     // Generate verification token and send verification email
     const verificationToken = await generateVerificationToken(email);
-    console.log("Verification token:", verificationToken);
+    console.log("رمز التحقق:", verificationToken);
     await sendVerificationEmail(
       verificationToken.email,
       verificationToken.token,
     );
 
-    return { success: "Confirmation email sent!" };
+    return { success: "تم إرسال بريد التأكيد!" };
   } catch (error) {
     // Log the error for debugging purposes
-    console.error("Error during user registration:", error);
-    return { error: "An error occurred during registration." };
+    console.error("خطأ أثناء التسجيل:", error);
+    return { error: "حدث خطأ أثناء التسجيل." };
   }
 };

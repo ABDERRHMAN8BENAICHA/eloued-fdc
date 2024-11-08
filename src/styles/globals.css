@@ -8,8 +8,8 @@ body,
   height: 100%;
 }
 
-/* 
-@layer base {
+
+/* @layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
@@ -68,108 +68,62 @@ body,
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    /* White */
-    --foreground: 210 100% 14%;
-    /* Dark Blue */
-    --card: 0 0% 100%;
-    /* White */
-    --card-foreground: 210 100% 14%;
-    /* Dark Blue */
-    --popover: 0 0% 100%;
-    /* White */
-    --popover-foreground: 210 100% 14%;
-    /* Dark Blue */
-    --primary: 0 0% 9%;
-    /* Very Dark */
-    --primary-foreground: 0 0% 98%;
-    /* Light */
-    --secondary: 0 0% 96.1%;
-    /* Light Gray */
-    --secondary-foreground: 0 0% 9%;
-    /* Dark Gray */
-    --muted: 0 0% 96.1%;
-    /* Light Gray */
-    --muted-foreground: 0 0% 45.1%;
-    /* Gray */
-    --accent: 0 0% 96.1%;
-    /* Light Gray */
-    --accent-foreground: 0 0% 9%;
-    /* Dark Gray */
-    --destructive: 14 91% 56%;
-    /* Orange */
-    --destructive-foreground: 0 0% 98%;
-    /* Light */
-    --border: 0 0% 89.8%;
-    /* Light Gray */
-    --input: 0 0% 89.8%;
-    /* Light Gray */
-    --ring: 0 0% 3.9%;
-    /* Dark */
+    --background: 210 100% 97%;
+    --foreground: 210 100% 13%;
+    --card: 210 100% 97%;
+    --card-foreground: 210 100% 13%;
+    --popover: 210 100% 97%;
+    --popover-foreground: 210 100% 13%;
+    --primary: 11 100% 49%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 100% 96%;
+    --secondary-foreground: 210 100% 13%;
+    --muted: 210 100% 96%;
+    --muted-foreground: 210 100% 55%;
+    --accent: 11 100% 49%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 11 100% 43%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 100% 90%;
+    --input: 210 100% 90%;
+    --ring: 210 100% 16%;
     --radius: 0.5rem;
     --chart-1: 12 76% 61%;
-    /* Color */
     --chart-2: 173 58% 39%;
-    /* Color */
     --chart-3: 197 37% 24%;
-    /* Color */
     --chart-4: 43 74% 66%;
-    /* Color */
     --chart-5: 27 87% 67%;
-    /* Color */
   }
 
   .dark {
-    --background: 210 100% 14%;
-    /* Dark Blue */
-    --foreground: 0 0% 98%;
-    /* Light */
-    --card: 210 100% 14%;
-    /* Dark Blue */
-    --card-foreground: 0 0% 98%;
-    /* Light */
-    --popover: 210 100% 14%;
-    /* Dark Blue */
-    --popover-foreground: 0 0% 98%;
-    /* Light */
-    --primary: 0 0% 98%;
-    /* Light */
+    --background: 210 100% 13%;
+    --foreground: 210 100% 97%;
+    --card: 210 100% 13%;
+    --card-foreground: 210 100% 97%;
+    --popover: 210 100% 13%;
+    --popover-foreground: 210 100% 97%;
+    --primary: 11 100% 97%;
     --primary-foreground: 0 0% 9%;
-    /* Dark */
-    --secondary: 0 0% 14.9%;
-    /* Dark */
-    --secondary-foreground: 0 0% 98%;
-    /* Light */
-    --muted: 0 0% 14.9%;
-    /* Dark */
-    --muted-foreground: 0 0% 63.9%;
-    /* Gray */
-    --accent: 0 0% 14.9%;
-    /* Dark */
-    --accent-foreground: 0 0% 98%;
-    /* Light */
-    --destructive: 14 91% 56%;
-    /* Orange */
-    --destructive-foreground: 0 0% 98%;
-    /* Light */
-    --border: 0 0% 14.9%;
-    /* Dark */
-    --input: 0 0% 14.9%;
-    /* Dark */
-    --ring: 0 0% 83.1%;
-    /* Light */
+    --secondary: 210 100% 25%;
+    --secondary-foreground: 210 100% 97%;
+    --muted: 210 100% 25%;
+    --muted-foreground: 210 100% 70%;
+    --accent: 11 100% 97%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 11 100% 40%;
+    --destructive-foreground: 0 0% 97%;
+    --border: 210 100% 25%;
+    --input: 210 100% 25%;
+    --ring: 210 100% 77%;
     --chart-1: 220 70% 50%;
-    /* Color */
     --chart-2: 160 60% 45%;
-    /* Color */
     --chart-3: 30 80% 55%;
-    /* Color */
     --chart-4: 280 65% 60%;
-    /* Color */
     --chart-5: 340 75% 55%;
-    /* Color */
   }
 }
+
+
 
 
 @layer base {

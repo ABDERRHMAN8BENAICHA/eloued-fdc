@@ -20,10 +20,10 @@ export const ResetPasswordMagicLinkEmail = ({
   return (
     <Html>
       <Head />
-      <Preview>Reset your password</Preview>
+      <Preview>إعادة تعيين كلمة المرور</Preview>
       <Body style={main}>
         <Container style={container}>
-          <Heading style={h1}>Reset your password.</Heading>
+          <Heading style={h1}>إعادة تعيين كلمة المرور</Heading>
           <Link
             href={resetLink}
             target="_blank"
@@ -33,7 +33,7 @@ export const ResetPasswordMagicLinkEmail = ({
               marginBottom: "16px",
             }}
           >
-            Click here to reset your password.
+            اضغط هنا لإعادة تعيين كلمة المرور
           </Link>
           <Text
             style={{
@@ -43,8 +43,8 @@ export const ResetPasswordMagicLinkEmail = ({
               marginBottom: "16px",
             }}
           >
-            If you didn&apos;t try to reset your password, you can safely ignore
-            this email.
+            إذا لم تكن قد طلبت إعادة تعيين كلمة المرور، يمكنك تجاهل هذا
+            البريد الإلكتروني بأمان.
           </Text>
           <Text
             style={{
@@ -54,7 +54,7 @@ export const ResetPasswordMagicLinkEmail = ({
               marginBottom: "38px",
             }}
           >
-            Hint: You can set a permanent password in Settings.
+            نصيحة: يمكنك تعيين كلمة مرور دائمة في الإعدادات.
           </Text>
           <Text style={footer}>
             <Link
@@ -64,14 +64,16 @@ export const ResetPasswordMagicLinkEmail = ({
             >
               https://nexa-starter.vercel.app
             </Link>
-            , the boilerplate for your next project.
-            <br />A clean starting point for your next big idea.
+            ، هو القالب الخاص بمشروعك القادم.
+            <br />
+            نقطة انطلاق نظيفة لفكرة مشروعك الكبير القادم.
           </Text>
         </Container>
       </Body>
     </Html>
   );
 };
+
 const main = {
   backgroundColor: "#ffffff",
 };

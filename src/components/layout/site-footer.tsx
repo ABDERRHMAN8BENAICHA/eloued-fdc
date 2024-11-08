@@ -10,14 +10,13 @@ export function SiteFooter() {
     <footer className="flex min-h-screen w-full items-center justify-center border-t">
       <div className="flex w-full flex-col px-4 md:w-2/3">
         <div className="w-full text-7xl font-bold">
-          <h1 className="w-full md:w-2/3">How can we help you. get in touch</h1>
+          <h1 className="w-full md:w-2/3">كيف يمكننا مساعدتك؟ تواصل معنا</h1> 
         </div>
         <div className="mt-8 flex flex-col md:flex-row md:justify-between">
           <p className="w-full text-muted-foreground md:w-2/3">
-            We are here to assist you in launching and scaling your SaaS
-            products. Feel free to reach out for any support or inquiries.
+            نحن هنا لمساعدتك في إطلاق وتوسيع منتجاتك البرمجية كخدمة. لا تتردد في التواصل معنا لأي دعم أو استفسارات.
           </p>
-          <Button>Contact Us</Button>
+          <Button>تواصل معنا</Button> 
         </div>
         <div className="flex flex-col">
           <div className="mb-12 mt-24 flex flex-row justify-between">
@@ -25,26 +24,26 @@ export function SiteFooter() {
               className="hidden cursor-pointer text-muted-foreground hover:text-primary md:block"
               href="#"
             >
-              About
+              عنّا
+            </Link> 
+            <Link
+              className="hidden cursor-pointer text-muted-foreground hover:text-primary md:block"
+              href="#"
+            >
+              خدماتنا
             </Link>
             <Link
               className="hidden cursor-pointer text-muted-foreground hover:text-primary md:block"
               href="#"
             >
-              Services
-            </Link>
+              لماذا نحن؟
+            </Link> 
             <Link
               className="hidden cursor-pointer text-muted-foreground hover:text-primary md:block"
               href="#"
             >
-              Why Us
-            </Link>
-            <Link
-              className="hidden cursor-pointer text-muted-foreground hover:text-primary md:block"
-              href="#"
-            >
-              Contact
-            </Link>
+              تواصل
+            </Link> 
             <div className="flex flex-row items-center justify-between space-x-8">
               <a href="#">
                 <FaFacebookF />

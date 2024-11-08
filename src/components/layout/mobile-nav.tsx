@@ -24,7 +24,7 @@ export function MobileNav() {
           className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 md:hidden"
         >
           <HamburgerMenuIcon className="h-5 w-5" />
-          <span className="sr-only">Toggle Menu</span>
+          <span className="sr-only">تبديل القائمة</span> 
         </Button>
       </SheetTrigger>
       <SheetContent side="left" className="pr-0">

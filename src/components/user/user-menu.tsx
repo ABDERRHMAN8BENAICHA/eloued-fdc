@@ -38,7 +38,7 @@ const UserMenu = ({ user }: { user: ExtendedUser }) => {
           <DropdownMenuItem asChild className="cursor-pointer">
             <Link href="/settings" className="flex">
               <Settings className="mr-2 h-4 w-4" />
-              <span>Settings</span>
+              <span>الإعدادات</span>
               <DropdownMenuShortcut>
                 <kbd>⌘S</kbd>
               </DropdownMenuShortcut>
@@ -48,7 +48,7 @@ const UserMenu = ({ user }: { user: ExtendedUser }) => {
             <DropdownMenuItem asChild className="cursor-pointer">
               <Link href="/admin" className="flex">
                 <UserCog className="mr-2 h-4 w-4" />
-                <span>Admin Dashboard</span>
+                <span>لوحة تحكم الإدارة</span>
                 <DropdownMenuShortcut>
                   <kbd>⌘A</kbd>
                 </DropdownMenuShortcut>
@@ -60,7 +60,7 @@ const UserMenu = ({ user }: { user: ExtendedUser }) => {
         <DropdownMenuItem className="cursor-pointer" asChild>
           <Link href="/contact">
             <LifeBuoy className="mr-2 h-4 w-4" />
-            <span>contact</span>
+            <span>اتصل بنا</span>
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem disabled>
@@ -75,7 +75,7 @@ const UserMenu = ({ user }: { user: ExtendedUser }) => {
           }}
         >
           <LogOut className="mr-2 h-4 w-4" />
-          <span>Log out</span>
+          <span>تسجيل الخروج</span>
           <DropdownMenuShortcut>
             <kbd>⌘Q</kbd>
           </DropdownMenuShortcut>

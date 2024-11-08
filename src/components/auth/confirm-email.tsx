@@ -20,10 +20,10 @@ export const VerifyMagicLinkEmail = ({
   return (
     <Html>
       <Head />
-      <Preview>Verify your email.</Preview>
+      <Preview>تحقق من بريدك الإلكتروني.</Preview>
       <Body style={main}>
         <Container style={container}>
-          <Heading style={h1}>Verify your email.</Heading>
+          <Heading style={h1}>تحقق من بريدك الإلكتروني.</Heading>
           <Link
             href={confirmLink}
             target="_blank"
@@ -33,7 +33,7 @@ export const VerifyMagicLinkEmail = ({
               marginBottom: "16px",
             }}
           >
-            Click here to confirm your email.
+            اضغط هنا لتأكيد بريدك الإلكتروني.
           </Link>
           <Text
             style={{
@@ -43,8 +43,7 @@ export const VerifyMagicLinkEmail = ({
               marginBottom: "16px",
             }}
           >
-            If you didn&apos;t try to verify your email , you can safely ignore
-            this email.
+            إذا لم تكن قد حاولت التحقق من بريدك الإلكتروني، يمكنك تجاهل هذا البريد بأمان.
           </Text>
           <Text
             style={{
@@ -54,7 +53,7 @@ export const VerifyMagicLinkEmail = ({
               marginBottom: "38px",
             }}
           >
-            Hint: You can set a permanent password in Settings.
+            تلميح: يمكنك تعيين كلمة مرور دائمة في الإعدادات.
           </Text>
           <Text style={footer}>
             <Link
@@ -64,8 +63,8 @@ export const VerifyMagicLinkEmail = ({
             >
               https://nexa-starter.vercel.app
             </Link>
-            , the boilerplate for your next project.
-            <br />A clean starting point for your next big idea.
+            ، القالب لبدء مشروعك التالي.
+            <br /> نقطة انطلاق نظيفة لفكرتك الكبيرة القادمة.
           </Text>
         </Container>
       </Body>

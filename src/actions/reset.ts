@@ -18,7 +18,7 @@ export const reset = async (values: z.infer<typeof ResetSchema>) => {
     const validatedFields = ResetSchema.safeParse(values);
 
     if (!validatedFields.success) {
-      return { error: "Invalid email!" };
+      return { error: "البريد الإلكتروني غير صالح!" };
     }
 
     const { email } = validatedFields.data;
@@ -27,7 +27,7 @@ export const reset = async (values: z.infer<typeof ResetSchema>) => {
     const existingUser = await getUserByEmail(email);
 
     if (!existingUser) {
-      return { error: "Email not found!" };
+      return { error: "البريد الإلكتروني غير موجود!" };
     }
 
     // Generate password reset token
@@ -39,12 +39,12 @@ export const reset = async (values: z.infer<typeof ResetSchema>) => {
       passwordResetToken.token,
     );
 
-    return { success: "Reset email sent!" };
+    return { success: "تم إرسال بريد إعادة تعيين كلمة المرور!" };
   } catch (error) {
     // Log the error for debugging purposes
-    console.error("Error during password reset:", error);
+    console.error("خطأ أثناء إعادة تعيين كلمة المرور:", error);
     return {
-      error: "An error occurred while attempting to reset the password.",
+      error: "حدث خطأ أثناء محاولة إعادة تعيين كلمة المرور.",
     };
   }
 };
