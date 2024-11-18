@@ -1,51 +1,87 @@
-# Nexa Starter (Next.js Template)
+# Future Developer Club
 
-This Next.js template is ready for action, equipped with everything you need to build powerful web apps.
+Welcome to the **Future Developer Club** project! This is a web application built for the Future Developer Club at Eloued University. The purpose of this project is to foster collaboration, share knowledge, and create a central platform for our developer community.
 
-## Tech Stack
+## Table of Contents
 
-- **Next.js 14:** Next.js is a React framework that enables functionality like server-side rendering and generating static websites for React-based web applications.
-- **TypeScript 5:**  Because sometimes, you just need to know what's what.
-- **Zod:** Zod is a TypeScript-first schema declaration and validation library.
-- **AuthJS 5:** Authentication and authorization made as easy as pie.
-- **Prisma:** Prisma is a modern database toolkit for PostgreSQL, MySQL, and SQLite, providing type-safe database access.
-- **Resend:** Resend is a mailing provider for sending transactional emails.
-- **Tailwind CSS with Shadcn library:** Styling made simple, with an extra dash of pizzazz.
-- **ESLint and Prettier:** ESLint is a pluggable linting utility for JavaScript and JSX. Prettier is an opinionated code formatter.
+1. [Project Overview](#project-overview)
+2. [Features](#features)
+3. [Getting Started](#getting-started)
+4. [Contributing](#contributing)
+5. [Code of Conduct](#code-of-conduct)
+6. [License](#license)
+
+## Project Overview
+
+The **eloued-fdc** platform is designed to:
+
+- Serve as a hub for FDC members at Eloued University.
+- Provide resources, event updates, and communication tools.
+- Encourage participation in coding challenges, workshops, and community discussions.
+
+## Features
+
+- **User Authentication**: Secure login and registration.
+- **Event Management**: Discover upcoming events and register.
+- **Resource Sharing**: Access learning materials, tutorials, and project documentation.
+- **Community Forum**: Engage with fellow students and mentors.
 
 ## Getting Started
 
-1. Clone this repository.
-2. Install dependencies using npm or yarn:
-> i use `pnpm` you can use whatever you want, if you want to use `npm` for example
-> just go the `package.json` and change this `"packageManager": "pnpm@8.14.1"` 
-> to this `"packageManager": "npm"` and then use the command bellow with your new package manager
+### Prerequisites
 
-```bash
-pnpm install
-# or
-npm install
-# or
-yarn install
- ```
-3. Configure environment variables:\
-Need a PostgreSQL database? You can spin one up with the start-database.sh script, or if you're feeling adventurous, create your own—I won't stop you! Just make sure to fill in those `.env` values based on `.env.example`.
+- [Node.js](https://nodejs.org/) (for the server and client)
+- [pnpm](https://pnpm.io/) (package manager)
+- [Next.js](https://nextjs.org/) (for front-end framework)
+- [Express.js](https://expressjs.com/) (for back-end framework)
 
+### Installation
 
-4. Run the development server:
-``` bash
-pnpm dev
-# or
-npm run dev
-# or
-yarn dev
-```
-5. Open http://localhost:3000 in your browser to see the application.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/mohamed-lifa7/eloued-fdc.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd eloued-fdc
+   ```
+3. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+4. Configure environment variables:
+   - Create a `.env` file based on the `.env.example` template.
+   - Set up any necessary API keys.
+5. Start the development server:
+   ```bash
+   pnpm run dev
+   ```
+6. Open http://localhost:3000 in your browser to view the app.
+
+## Contributing
+
+We welcome contributions from all club members! Please read our Contributing Guide for instructions on how to get started.
+
+### Steps to Contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Commit your changes and push your branch:
+
+   ```bash
+   git commit -m "Add new feature"
+   git push origin feature-name
+   ```
+
+4. Open a pull request in the main repository.
+
+### Code of Conduct
+
+Our project follows the T3 App's strict mode. For more details, visit the [T3 App documentation](https://create.t3.gg/).
 
 ## License
 
-This project is licensed under the MIT License.
-
-## Shoutout 📢
-
-A big shoutout to [Create T3 App](https://create.t3.gg) for for this.
+This project is licensed under the MIT License. See the LICENSE file for details.
