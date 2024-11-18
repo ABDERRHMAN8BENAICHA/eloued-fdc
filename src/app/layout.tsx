@@ -35,7 +35,7 @@ export default async function RootLayout({
 
   return (
     <SessionProvider session={session}>
-      <html lang="en" dir="rtl">
+      <html lang="ar" dir="rtl">
         <body className={cn("min-h-screen", cairo.className)}> 
           <Suspense>
             <ThemeProvider
