@@ -6,9 +6,9 @@ import Pricing from "@/components/layout/pricing";
 export default function HomePage() {
   return (
     <main className="flex flex-col items-center justify-center pt-10">
-      {/* <Hero /> */}
+      <Hero />
       <Features />
-      {/* <Pricing/> */}
+      <Pricing/>
       <Cta />
     </main>
   );

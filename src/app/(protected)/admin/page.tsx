@@ -1,7 +1,7 @@
 import { AreaGraph } from "@/components/admin/charts/area-graph";
 import { BarGraph } from "@/components/admin/charts/bar-graph";
 import { PieGraph } from "@/components/admin/charts/pie-graph";
-import { Overview } from "@/components/admin/overview";
+// import { Overview } from "@/components/admin/overview";
 import { RecentSales } from "@/components/admin/recent-sales";
 import { Button } from "@/components/ui/button";
 import {

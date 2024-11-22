@@ -1,11 +1,8 @@
-import { siteConfig } from "@/config/site-config";
-import { Separator } from "../ui/separator";
 import { Button } from "../ui/button";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import Link from "next/link";
 
 export function SiteFooter() {
-  const date = new Date();
   return (
     <footer className="flex w-full items-center justify-center border-t">
       <div className="flex w-full flex-col p-8 space-x-8">

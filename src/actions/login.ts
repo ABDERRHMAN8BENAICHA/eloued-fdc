@@ -45,13 +45,13 @@ export const login = async (
 
   const existingUser  = await getUserByEmail(email);
 
-  if (!existingUser?.email && !existingUser.password) {
+  if (!existingUser?.email && !existingUser?.password) {
     return { error: "البريد الإلكتروني غير موجود!" };
   }
 
   if (!existingUser.emailVerified) {
     const verificationToken = await generateVerificationToken(
-      existingUser.email,
+      existingUser.email!,
     );
 
     await sendVerificationEmail(
